@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
+    <title>Contact Me</title>
+
+    <link rel="website icon" type="png" href="icon/Fauzilogoo.png">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/contact.css">
+
+</head>
+<body>
+    
+<!-- ini untuk navbar  -->
+    <header>
+        <div class="logo">Fauzy Portfolio</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Ini untuk tutup navbar -->
+    <div class="wrapper"> 
+        <div class="box sidebar">
+                <h1><span>Hi,</span> You bring me a glass of coffe?</h1>
+                <h3>Wanna talk about project?</h3>
+                <img src="icon/coffe.png" alt="">
+                <h1>Send me an <span>email</span> or hit my <span>social media</span> on about page.</h1>
+        </div>
+        <form id="contact-form" name="contact-form" action="https://formspree.io/f/mjvqkqvr" method="POST">
+        <div class="box side">
+            <h1>Contact <span1>Me</span1></h1>
+            <div class="inputBox">
+                <input type="email" name="from" id="from" required="required">
+                <span>Email</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="subject" id="subject" required="required">
+                <span>Subject</span>
+            </div>
+            <div class="inputBox">
+                <textarea type="text" name="description" id="description" required></textarea>
+                <span>Description</span>
+            </div>
+            <div class="btn-row">
+                <div class="ct-btn">
+                    <button class="border-neon" id="submit" type="submit">Kirim Email <img src="icon/send.png"></button>
+                <div class="loader" id="loader"></div>
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+
+    <!-- ini untuk tutup content -->
+
+    <script src="javascript/script.js"></script>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        };
+    </script>
+
+    <script>
+        const contactForm = document.getElementById("contact-form");
+        const loader = document.querySelector(".loader");
+        loader.style.display = "none";
+
+        contactForm.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            loader.style.display = "block";
+            const url = e.target.action;
+            const formData = new FormData(contactForm);
+
+            fetch(url, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors",
+            }).then(() => {
+                loader.style.display = "none";
+                window.location.href = '/thankyou.html';
+            }).catch((e) => alert("Error Occured"));
+        });
+    </script>
+</body>
+</html>

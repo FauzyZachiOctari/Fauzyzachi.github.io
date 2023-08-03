@@ -1,0 +1,386 @@
+*, html{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+body{
+	font-family: "poppins";
+	/*background-color: #F5F5F5;*/
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+header{
+	width: 100%;
+	height: 80px;
+	/*background-color: white;*/
+	background-color: #1F1D1D;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 100px;
+	align-items: center;
+	/*box-shadow:  0 16px 8px -9px rgba(191, 191, 191, 1);*/
+}
+
+.logo{
+	font-size: 28px;
+	font-weight: 600;
+	color: #ffffff;
+}
+
+.hamburger{
+	display: none;
+
+}
+
+.nav-bar ul{
+	display: flex;
+	list-style: none;
+	z-index: 100000;
+}
+
+.nav-bar ul li a{
+	text-decoration: none;
+	display: block;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 10px 25px;
+	margin: 0 5px;
+	transition: .2s;
+	z-index: 100000;
+
+}
+
+.nav-bar ul li a::after{
+	display: block;
+	content: "";
+	color: #EEBA2B;
+	/*border-bottom: 2px solid #A5D7E8;*/
+	border-bottom: 1px solid #EEBA2B;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+	z-index: 100000;
+}
+
+.nav-bar ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+.nav-bar.active{
+	height: 450px;
+	z-index: 100000;
+}
+
+.nav-bar ul li a.active{
+	/*color: #19376D;*/
+	color: #EEBA2B;
+	z-index: 100000;
+	
+}
+
+/*==============Ini untuk css CONTACT=======================*/
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 10px;
+	margin: 40px 20px 22px 20px;
+	
+}
+
+.wrapper .sidebar img{
+	height:17rem;
+	width:17rem;
+	/*border-radius: 50%;*/
+	object-fit: cover;
+	margin-bottom: 1rem;
+	/*border:.4rem solid #576CBC;*/
+	/*border:.4rem solid #EEBA2B;*/
+}
+
+.wrapper ul{
+	list-style: none;
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.wrapper .sidebar{
+	font-family: sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: transparent;
+	color: #fff;
+	padding: 20px;
+	font-size: 14px;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+}
+
+.wrapper h3{
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 16pt;
+	margin-bottom: 0.5rem;
+	font-weight: 550;
+}
+
+.wrapper h1{
+	text-decoration: none;
+	font-size: 18pt;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+.wrapper .sidebar span{
+	text-decoration: none;
+	color: #EEBA2B;
+}
+
+.wrapper .side{
+	font-family: sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	/*align-items: center;*/
+	background-color: transparent;
+	color: #fff;
+	padding: 20px;
+	font-size: 14px;
+	align-content: center;
+	/*justify-content: center;*/
+	flex-direction: column;
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+	gap: 25px;
+}
+
+.wrapper .side span1{
+	text-decoration: none;
+	color: #EEBA2B;
+}
+
+.wrapper .inputBox{
+	position: relative;
+	width: 70%;
+}
+
+.wrapper textarea{
+	height: 100px;
+}
+
+.wrapper .inputBox textarea,
+.wrapper .inputBox input{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	background: #1F1D1D;
+	border-radius: 5px;
+	outline: none;
+	color: #fff;
+	font-size: 1em;
+	transition: 0.5s; 
+}
+
+.wrapper .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 10px;
+	pointer-events: none;
+	font-size: 1em;
+	color: rgba(255, 255, 255, 0.25);
+	text-transform: uppercase;
+	transition: 0.5s; 
+}
+
+.wrapper .inputBox textarea:valid ~ span,
+.wrapper .inputBox textarea:focus ~ span,
+.wrapper .inputBox input:valid ~ span,
+.wrapper .inputBox input:focus ~ span {
+	color: #EEBA2B;
+	transform: translateX(10px) translateY(-7px);
+	font-size: 0.65em;
+	padding: 0 10px;
+	background: #000000;
+	border-left: 1px solid #EEBA2B;
+	border-right: 1px solid #EEBA2B;
+	letter-spacing: 0.2em;
+}
+
+/*.wrapper .inputBox:nth-child(2) input:valid ~ span,
+.wrapper .inputBox:nth-child(2) input:focus ~ span {
+	background: #00dfc4;
+	color: #1F1D1D;
+	border-radius: 2px;
+}*/
+
+.wrapper .inputBox textarea:valid,
+.wrapper .inputBox textarea:focus,
+.wrapper .inputBox input:valid,
+.wrapper .inputBox input:focus{
+	border: 1px solid #EEBA2B;
+}
+
+.wrapper .box .side button{
+	float: left;
+}
+
+button img{
+	display: flex;
+	width: 20%;
+}
+
+button.border-neon {
+    display: flex;
+    position: relative;
+    font-size: 12px;
+    width: 130px;
+    height: 40px;
+    border-radius: 4px;
+    cursor:pointer;
+    flex-wrap: wrap;
+    font-family: lato;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    white-space-collapse: preserve; 
+}
+
+.border-neon {
+    background-color: transparent;
+    border: 2px solid #EEBA2B;
+    color: #EEBA2B;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+ 
+
+.border-neon:hover, .border-neon:focus {
+    -webkit-box-shadow: inset 0px 0px 8px 3px #DEBB00;
+    box-shadow: 0px 0px 10px 3px #DEBB00, inset 0px 0px 10px 3px #DEBB00;
+    border-color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #DEBB00, 0 0 40px #DEBB00, 0 0 50px #DEBB00, 0 0 60px #DEBB00, 0 0 70px #DEBB00
+}
+
+ @keyframes spinner {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+     .wrapper .loader::before {
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: #EEBA2B;
+        border-radius: 50%;
+        content: "";
+        height: 2%;
+        width: 2vh;
+        position: absolute;
+        display: flex;
+        margin: -19px 33px 25px 164px;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;
+      }
+/*==============Ini untuk tutup css CONTACT=======================*/
+
+/*Ini untuk responsive*/
+@media only screen and (max-width: 900px){
+	header{
+		width: 100%;
+		height: 80px;
+		/*background-color: white;*/
+		background-color: #1F1D1D;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 100px;
+		/*align-items: center;*/
+	}
+
+	.hamburger{
+		display: block;
+		cursor: pointer;
+		margin: -40px;
+	}
+
+	.hamburger .line{
+		width: 30px;
+		height: 3px;
+
+		background-color: #fff;
+		/*background: #0B2447;*/
+		margin: 6px 0;
+	}
+
+	.nav-bar{
+		height: 0;
+		position: absolute;
+		top: 80px;
+		left: 0;
+		right: 0;
+		width: 100vw;
+
+		background-color: #1F1D1D;
+		/*box-shadow: 0 16px 8px -9px rgba(191, 191, 191, 1);*/
+		transition: 0.5s;
+		overflow: hidden;
+		z-index: 100000;
+	}
+
+	.nav-bar.active{
+		height: 300px;
+		z-index: 100000;
+
+	}
+
+	.nav-bar ul{
+		display: contents;
+		width: fit-content;
+		margin: 88px auto 0 auto;
+		text-align: center;
+		transition: 0.5s;
+		opacity: 0;
+		z-index: 100000;
+
+	}
+
+	.nav-bar .active ul{
+		opacity: 1;
+		color: #ffffff;
+		z-index: 100000;
+	}
+
+	.nav-bar ul li a{
+		/*display: block;*/
+		color: #ffffff;
+		font-size: 18px;
+		margin-bottom: 12px;
+		z-index: 100000;
+	}
+
+	.logo{
+		font-size: 20px;
+		font-weight: 600;
+		color: #ffffff;
+		margin: 0px 0px 0px -40px;
+	}
+
+
+	.wrapper .inputBox{
+		position: relative;
+		width: 100%;
+	}
+
+	.wrapper .side h1{
+		font-size: 23pt;
+	}
+}

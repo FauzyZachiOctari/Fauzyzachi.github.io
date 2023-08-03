@@ -1,0 +1,122 @@
+*, html{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/*color: #fff;*/
+}
+
+body{
+	font-family: "poppins";
+	/*background-color: #F5F5F5;*/
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+h1{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	font-size: 30pt;
+	color: #EEBA2B;
+	font-family: sans-serif;
+	margin-top: 1%;
+}
+
+h2{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	font-size: 25pt;
+	color: #fff;
+	font-family: sans-serif;
+	margin-top: 1%;
+}
+
+
+img {
+	width: 30%;
+	display: flex;
+	margin: 30px auto;
+}
+
+span{
+	color: #fff;
+}
+
+button.border-neon {
+    display: flex;
+    position: relative;
+    font-size: 12px;
+    width: 130px;
+    height: 40px;
+    border-radius: 4px;
+    cursor:pointer;
+    flex-wrap: wrap;
+    font-family: lato;
+    align-content: center;
+    justify-content: center;
+    margin: 4px auto;
+}
+
+.border-neon {
+    background-color: transparent;
+    border: 2px solid #EEBA2B;
+    color: #EEBA2B;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+ 
+
+.border-neon:hover, .border-neon:focus {
+    -webkit-box-shadow: inset 0px 0px 8px 3px #DEBB00;
+    box-shadow: 0px 0px 10px 3px #DEBB00, inset 0px 0px 10px 3px #DEBB00;
+    border-color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #DEBB00, 0 0 40px #DEBB00, 0 0 50px #DEBB00, 0 0 60px #DEBB00, 0 0 70px #DEBB00
+}
+
+a{
+	text-decoration: none;
+	color: #EEBA2B;
+}
+
+@media only screen and (max-width: 900px){
+
+	h1{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-size: 20pt;
+		color: #EEBA2B;
+		font-family: sans-serif;
+		margin-top: 15%;
+	}
+
+	h2{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-size: 15pt;
+		color: #fff;
+		font-family: sans-serif;
+		margin: 1% 4% 0 4%;
+	}
+
+	button.border-neon {
+	    display: flex;
+	    position: relative;
+	    font-size: 10px;
+	    width: 70px;
+	    height: 27px;
+	    border-radius: 4px;
+	    cursor:pointer;
+	    flex-wrap: wrap;
+	    font-family: lato;
+	    align-content: center;
+	    justify-content: center;
+	    margin: 10px auto;
+	}
+}

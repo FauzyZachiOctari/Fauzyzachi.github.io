@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
+    <title>Home</title>
+
+    <link rel="website icon" type="png" href="icon/Fauzilogoo.png">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- ini untuk navbar  -->
+    <header>
+        <div class="logo">Fauzy Portfolio</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Ini untuk tutup navbar -->
+
+    <!-- Ini untuk content -->
+    <div class="wrapper">
+            <ul>
+                <li><h1>Hi, I am</h1></li>
+                <li><h2>Fauzy Zachi Octari Tambunan</h2></li>
+                <li><h3 class="typewrite text-white" data-period="2000" data-type='[ "Web Developer","Informatics Engineering" ]'>
+                <span class="wrap">Web Developer</span>
+                </h3></li>
+                <li><h1>Welcome to my personal Portfolio</h1></li>
+            </ul>
+        <!-- <div class="index index-profile"> -->
+            <img src="images/MyPict.jpg" alt="">
+        <!-- </div> -->
+    </div>
+    <!-- ini untuk tutup content -->
+
+    <script src="javascript/script.js"></script>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        };
+    </script>
+</body>
+</html>
