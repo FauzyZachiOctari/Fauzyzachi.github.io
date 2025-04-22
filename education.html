@@ -53,9 +53,9 @@
                     <p>Prestasi :</p>
                 </div>
                 <div class="share">
-                    <div class="share-box pi">
+                    <div class="share-box pi" onclick="toggleText(this)">
                       <img src="icon/tropi1.png">
-                      <span>The top student Islamic University of Riau at the graduation ceremony of Period 3, 2022.</span>
+                      <span class="desc">The top student Islamic University of Riau at the graduation ceremony of Period 3, 2022.</span>
                     </div>
                 </div>
 
@@ -80,9 +80,9 @@
                     <p>Prestasi :</p>
                 </div>
                 <div class="share">
-                    <div class="share-box pi">
+                    <div class="share-box pi" onclick="toggleText(this)">
                       <img src="icon/tropi1.png">
-                      <span>Obtained 4th rank in the National Examination in 2018 at Vocational Highschool 1 Pasir Penyu.</span>
+                      <span class="desc">Obtained 4th rank in the National Examination in 2018 at Vocational Highschool 1 Pasir Penyu.</span>
                     </div>
                 </div>
     			<span class="right-container-arrow"></span>
@@ -101,15 +101,28 @@
     				<h2>Experience</h2>
     			</div>
     			<div class="containers__">
-                     <div class="box">
+                    <div class="box">
+                        <h4>Oct 2022 - Now</h4>
+                        <h3>Sambu Group (PT Riau Sakti United Plantations)</h3>
+                        <h2>Web Developer & .Net Developer</h2>
+                        <ul>
+                           <li>Develop and maintenance websites using Codeigniter 3, Bootstrap, MySql & PgSQL, CSS, JavaScript, HTML and .NET (C#) according to company needs.</li>
+                           <li>Create and maintain accounting systems for PT Pulau Sambu Singapore & ZHL Singapore, including transaction recording (Payable & Receivable payment), financial report (general ledger, Balance Sheet, Trial Balance, etc.) and COA management.</li>
+                           <li>Building a container shipping system for ZHL Singapore, including container management, shipping schedules, and logistics tracking.</li>
+                           <li>Perform in database integration, dynamic data manipulation, and report generation in PDF and Excel formats.</li>
+                           <li>Created an automatic email sending service in outlook using .Net</li>
+                        </ul>
+                    </div>
+
+                    <div class="box">
                         <h4>Oct 2021 - Now</h4>
                         <h3>Freelancer</h3>
                         <h2>Web Developer & Assistant Final Project</h2>
-                       <ul>
+                        <ul>
                            <li>Designing and building a web-based system using PHP Frameworks: Laravel & Codeigniter, Bootstrap, MySql, CSS, JavaScript, and HTML.</li>
                            <li>Together with the team, conducting system analysis, creating plans, coordinating, and providing recommendations for the system that will be developed.</li>
                            <li>Consultation in writing the final project in the field of Computer Engineering.</li>
-                       </ul>
+                        </ul>
                     </div>
 
     				<div class="box">
@@ -178,6 +191,11 @@
             navBar = document.querySelector(".nav-bar");
             navBar.classList.toggle("active");
         };
+
+        function toggleText(element) {
+            const desc = element.querySelector('.desc');
+            desc.classList.toggle('show');
+        }
     </script>
 </body>
 </html>

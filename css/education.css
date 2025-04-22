@@ -202,7 +202,7 @@ header{
 	font-size: 14px;
 }
 
-.text-box .share-box span{
+/* .text-box .share-box span{
 	background: #fff;
 	position: absolute;
 	top: 0;
@@ -213,7 +213,6 @@ header{
 	border-left: 1px dotted white;
 	border-radius: 0 5px 5px 0;
 	transition: 0.5s;
-	/*z-index: -1;*/
 }
 
 .text-box .share-box:hover span{
@@ -226,7 +225,33 @@ header{
 
 .text-box .share-box:hover img{
 	transform: rotate(360deg);
+} */
+
+.text-box .share-box {
+	position: relative;
+	display: inline-block;
 }
+
+.text-box .share-box .desc {
+	position: absolute;
+	left: 0;
+	background: #1F1D1D;
+	color: white;
+	border-radius: 5px;
+	margin-left: 30px;
+	opacity: 0;
+	visibility: hidden;
+	line-height: 1.5;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+	width: 430px;
+	text-align: justify;
+	z-index: 10;
+}
+
+.text-box .share-box .desc.show {
+	opacity: 1;
+	visibility: visible;
+}  
 
 .text-box .pres p{
 	font-size: 14px;
@@ -553,6 +578,7 @@ header{
 		font-size: 20px;
 		/*width: 8%;*/
 		/*text-align: center;*/
+		margin-top: 5px;
 		transition: 0.5s;
 		position: sticky;
 		/*margin: 8px 0px 0px -4px;*/
